@@ -1,0 +1,51 @@
+name: hg1
+version: '0.1.0.0'
+category: Web
+author: Kit Dallege
+maintainer: kitdallege@gmail.com
+copyright: ! 'Copyright: (c) 2017 Kit Dallege'
+license: BSD3
+homepage: https://github.com/kitdallege/hg1#readme
+extra-source-files:
+- README.md
+library:
+  source-dirs: src
+  exposed-modules:
+  dependencies:
+  - base >=4.7 && <5
+  - aeson
+  - aeson-tiled
+  - containers
+  - extra
+  - monad-loops
+  - protolude
+  - sdl2
+  - sdl2-image
+  #- sdl2-mixer
+  - sdl2-ttf
+  - random
+  - text
+  - vector
+executables:
+  hg1-exec:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -Wall
+    dependencies:
+    - base
+    - hg1
+    - aeson
+    - aeson-tiled
+    - containers
+    - extra
+    - monad-loops
+    - protolude
+    - lens
+    - sdl2
+    - sdl2-image
+    #- sdl2-mixer
+    - sdl2-ttf
+    - random
+    - text
+    - vector
